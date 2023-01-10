@@ -229,9 +229,9 @@ def fsub_button(client, message):
                     )
                 ]
             )
-         except IndexError:
+        except IndexError:
              pass
-         return buttons
+        return buttons
     if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP and FORCE_SUB_GROUP2 and FORCE_SUB_GROUP3 and FORCE_SUB_GROUP4 and not FORCE_SUB_GROUP5:
         buttons = [
             [
