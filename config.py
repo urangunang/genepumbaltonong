@@ -18,7 +18,9 @@ if APP_ID:
 API_HASH = os.environ.get("API_HASH", "")
 
 # ID Channel Database
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = os.environ.get("CHANNEL_ID", "")
+if CHANNEL_ID:
+    CHANNEL_ID = int(CHANNEL_ID)
 
 # NAMA OWNER
 OWNER = os.environ.get("OWNER", "")
@@ -37,12 +39,29 @@ UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", "main")
 DB_URI = os.environ.get("DATABASE_URL", "")
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
-FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "0"))
-FORCE_SUB_GROUP2 = int(os.environ.get("FORCE_SUB_GROUP2", "0"))
-FORCE_SUB_GROUP3 = int(os.environ.get("FORCE_SUB_GROUP3", "0"))
-FORCE_SUB_GROUP4 = int(os.environ.get("FORCE_SUB_GROUP4", "0"))
-FORCE_SUB_GROUP5 = int(os.environ.get("FORCE_SUB_GROUP5", "0"))
+FORCE_SUB_CHANNEL = os.environ.get("FORCE_SUB_CHANNEL", "")
+if FORCE_SUB_CHANNEL:
+    FORCE_SUB_CHANNEL = int(FORCE_SUB_CHANNEL)
+
+FORCE_SUB_GROUP = os.environ.get("FORCE_SUB_GROUP", "")
+if FORCE_SUB_GROUP:
+    FORCE_SUB_GROUP = int(FORCE_SUB_GROUP)
+
+FORCE_SUB_GROUP2 = os.environ.get("FORCE_SUB_GROUP2", "")
+if FORCE_SUB_GROUP2:
+    FORCE_SUB_GROUP2 = int(FORCE_SUB_GROUP2)
+
+FORCE_SUB_GROUP3 = os.environ.get("FORCE_SUB_GROUP3", "")
+if FORCE_SUB_GROUP3:
+    FORCE_SUB_GROUP3 = int(FORCE_SUB_GROUP3)
+
+FORCE_SUB_GROUP4 = os.environ.get("FORCE_SUB_GROUP4", "")
+if FORCE_SUB_GROUP4:
+    FORCE_SUB_GROUP4 = int(FORCE_SUB_GROUP4)
+
+FORCE_SUB_GROUP5 = os.environ.get("FORCE_SUB_GROUP5", "")
+if FORCE_SUB_GROUP5:
+    FORCE_SUB_GROUP5 = int(FORCE_SUB_GROUP5)
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
